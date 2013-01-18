@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      img:hover {
+        cursor: crosshair;
+      }
+    </style>
+    <script src="js/jquery-1.2.2.js"></script>
+    <script>
+      function load_img() {
+        $('#image').attr('src', $('#img_src').attr('value'));
+      }
+      
+      function img_clicked() {
+        $('#coords').select();
+      }
+      
+      $().ready( function() {
+        $('#image').mousemove( function(e) {
+          x = e.pageX - $('#image').offset().left;
+          y = e.pageY - $('#image').offset().top;
+          $('#coords').attr('value', x + ', ' + y);
+        })
+
+      })
+    </script>
+  </head>
+  
+  Image URL: <input type="text" id="img_src" /> <button onclick="load_img()">load image</button>
+  <br/><br/>
+  X,Y:<input type="text" id="coords" />
+  <br/><br/>
+  <img id="image" onclick="img_clicked()" />
+	<br/>
+	<br/>
+	&lt;area&gt; tag example (<a href="http://www.w3schools.com/TAGS/tag_area.asp">http://www.w3schools.com/TAGS/tag_area.asp</a>):
+	<pre>
+&lt;img src ="planets.gif" width="145" height="126" alt="Planets" usemap ="#planetmap" /&gt;
+
+&lt;map name="planetmap">
+  &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" /&gt;
+  &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury" /&gt;
+  &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus" /&gt;
+&lt;/map&gt;
+	</pre>
+	
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-71034-5");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+	
+</html>

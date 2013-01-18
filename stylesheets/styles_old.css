@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+}
+
+#title_bar {
+	margin:0px auto;
+	background-image: url('/images/adam_wisniewski_bar_yellow.gif');
+	background-repeat: no-repeat;
+	height: 141px;
+	width: 800px;
+	text-align: left;
+}
+
+#title_bar #links {
+	padding-top: 77px;
+}
+
+#title_bar #links a {
+	color: #666;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	margin-left: 15px;
+	padding-bottom: 3px;
+}
+
+#title_bar #links a:hover {
+	color: #ccf;
+	border-bottom: 5px solid #ccf;
+}
+
+a#link_home {
+	border-bottom: 5px solid #41803b;
+}
+
+a#link_blog {
+	border-bottom: 5px solid #a7c494;
+}
+
+a#link_projects {
+	border-bottom: 5px solid #bcd3cd;
+}
+
+a#link_resume {
+	border-bottom: 5px solid #f4dd83;
+}
+
+a#link_about {
+	border-bottom: 5px solid #923224;
+}
