@@ -1,0 +1,30 @@
+---
+extends: base.j2
+default_block: main
+title: Adam Wisniewski - Toronto / Oshawa Ruby on Rails / Java Developer - Blog
+description: Adam Wisniewski - Toronto / Oshawa Ruby on Rails / Java Developer - Blog
+---
+{% block title_bar_style %}
+    <style>
+      #title_bar {
+        background-image: url('{{
+            media_url('images/adam_wisniewski_bar_light_green.gif') }}')
+      }
+    </style>
+{% endblock %}
+
+{% for e in site.adamw523_feed.entries %}
+entry
+{% endfor %}
+  <div id="main_content">
+    <div id="blog_main_content">
+    <h1 class="sect_title blog_bg_colour">
+      Latest Blog Entries
+    </h1>
+
+    <ul class="blog_list">
+      {% include '/_adamw523_feed.html' %}
+    </ul>
+  </div>
+
+  {% include '/_network_links.html' %}

@@ -1,0 +1,50 @@
+---
+extends: base.j2
+default_block: main
+title: Adam Wisniewski - Toronto / Oshawa Ruby on Rails / Java Developer - Resume
+description: Adam Wisniewski - Toronto / Oshawa Ruby on Rails / Java Developer - Resume
+---
+{% block title_bar_style %}
+    <style>
+      #title_bar {
+        background-image: url('{{
+            media_url('images/adam_wisniewski_bar_yellow.gif') }}')
+      }
+    </style>
+{% endblock %}
+
+  <div id="main_content">
+    <div id="resume_main_content">
+  <h1 class="sect_title resume_bg_colour">
+    Resume
+  </h1>
+
+  <a href="http://adamw523.s3.amazonaws.com/resume/adam_wisniewski_resume.pdf">
+    <img alt="Pdf" src="{{ media_url('images/pdf.png') }}" />Adam Wisniewski's Resume (PDF)</a> - 
+  <a href="http://docs.google.com/viewer?url=http%3A%2F%2Fadamw523.s3.amazonaws.com%2Fresume%2Fadam_wisniewski_resume.pdf">Google In-Browser Preview</a>
+
+  <dl class="skills_list">
+    <dt>Development Languages / Environments</dt>
+    <dd> Ruby on Rails, Java, PHP, HTML / Javascript AJAX, shell 
+      scripting, Facebook Application Platform 
+    </dd>
+    <dt>Java Technologies</dt>
+    <dd>Java EE ( J2EE ), EJB, JMS, JSP, JSF, Jasper Reports, XML 
+      processing, DWR AJAX Web applications, Swing, Hibernate, 
+      JBoss Portal, JBoss Rules, jBPM, JNLP Java Web Start 
+    </dd>
+    <dt>Communication Services</dt>
+    <dd>LDAP, DNS, SMTP, HTTP, FTP SSH, Jabber, Web Services
+    </dd>
+    <dt>Operating Systems</dt>
+    <dd>Linux / UNIX, Microsoft Windows, Mac OSX 
+    </dd>
+    <dt>Database Administration and 
+      Development</dt>
+    <dd>MySQL, Postgresql, MS SQL, Oracle 
+    </dd>
+
+  </dl>
+</div>
+
+{% include '/_network_links.html' %}
