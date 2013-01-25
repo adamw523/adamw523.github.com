@@ -1,4 +1,4 @@
-# adamw523.com Site
+# Source of adamw523.com Site
 
 A [Hyde](http://hyde.github.com/) powered site.
 
