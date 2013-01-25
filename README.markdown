@@ -4,9 +4,12 @@ A [Hyde](http://hyde.github.com/) powered site.
 
 ## Development
 
-All development happens in the `hyde` branch.
-
+All development happens in the `hyde` branch. 
 HTML and other content is in the `content` directory.
+
+A clone of the repo on the `master` branch needs to exist at 
+`../adamw523.github.com` relative to the clone of the repo
+on the `hyde` branch.
 
 ## Deployment
 
@@ -16,13 +19,13 @@ $ hyde publish -p github
 
 ## Tools
 
-Serve up site locally on port `8080`
+Serve up site locally on port `8080`:
 
 ```
 $ hyde serve
 ```
 
-Generate site from templates
+Generate site from templates:
 
 ```
 $ hyde gen
