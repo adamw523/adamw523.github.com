@@ -1,5 +1,7 @@
 import feedparser
 from hyde.plugin import Plugin
+from hyde.util import getLoggerWithNullHandler  
+logger = getLoggerWithNullHandler('hyde.engine')
 
 class AWRssFeedPlugin(Plugin):
     def __init__(self, site):
@@ -7,7 +9,8 @@ class AWRssFeedPlugin(Plugin):
         self.site = site
 
     def begin_site(self):
-        adamw523_feed = feedparser.parse('http://adamw523.posterous.com/rss.xml')
+        logger.info("Fetching adamw523 blog RSS")
+        adamw523_feed = feedparser.parse('http://blog.adamw523.com/rss.xml')
         with open('content/_adamw523_feed.html', 'w') as o:
             for e in adamw523_feed.entries:
                 o.write('<li><a href="%s">%s</a></li>' % (e.link, e.title))

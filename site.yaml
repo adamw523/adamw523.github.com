@@ -22,3 +22,9 @@ context:
                 url: index.html
 
         test: testing
+publisher:
+    github:
+        type: hyde.ext.publishers.dvcs.Git
+        path: ../adamw523.github.com
+        url: git@github.com:adamw523/adamw523.github.com.git
+        branch: master
